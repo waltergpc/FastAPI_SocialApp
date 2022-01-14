@@ -1,8 +1,8 @@
 from fastapi import FastAPI
 from .database import engine
 from . import models
-import psycopg2
 from .Routes import userRoutes, postRoutes, authRoutes
+from .config import settings
 
 
 models.Base.metadata.create_all(bind=engine)
